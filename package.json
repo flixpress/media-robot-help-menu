@@ -1,0 +1,22 @@
+{
+  "name": "media-robot-help-menu",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Just the basis for the help menu at Flixpress",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-autoprefixer": "~0.6.4",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-sass": "~0.9.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-watch": "git://github.com/gruntjs/grunt-contrib-watch.git#b884948805940c663b1cbb91a3c28ba8afdebf78",
+    "jshint-stylish": "~0.1.3",
+    "load-grunt-tasks": "~0.2.0",
+    "time-grunt": "~0.2.8"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
