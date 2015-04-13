@@ -101,11 +101,13 @@
     $infoPane.find('.jwplayer-video').each(function(){
       var id = $(this).attr('id');
       var options = jwplayers[id];
-      jwplayer(id).setup(options).onTime(function(timing){
-        // Detect near end of video
-        if (timing.position > (timing.duration - 0.3) ){
-            jwplayer(id).seek(0).pause(true);
-        }
+      $jwPromise.done(function(){
+        jwplayer(id).setup(options).onTime(function(timing){
+          // Detect near end of video
+          if (timing.position > (timing.duration - 0.3) ){
+              jwplayer(id).seek(0).pause(true);
+          }
+        });        
       });
     });
   }
@@ -187,6 +189,14 @@
 
   if ($('head link.help-menu').length < 1) {
     $('head').append($('<link rel="stylesheet" type="text/css" href="'+cssFile+'">'));
+  }
+
+  var $jwPromise;
+  if (window.jwplayer === undefined) {
+    $.ajaxSetup({cache: true});
+    $jwPromise = $.getScript('http://jwpsrv.com/library/T7G6AEcEEeOhIhIxOQfUww.js');        
+  } else {
+    $jwPromise = $.Deferred().resolve();
   }
 
   $.get(jsonFile, function(fetchedData){
