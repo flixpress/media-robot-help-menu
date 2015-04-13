@@ -17,6 +17,10 @@ module.exports = function (grunt) {
       javascript: {
         files: ['files/**/*.js'],
         tasks: ['jshint:all', 'copy:javascript']
+      },
+      css: {
+        files: ['files/**/*.css'],
+        tasks: ['copy:css']
       }
     },
     sass: {
@@ -57,7 +61,19 @@ module.exports = function (grunt) {
             dest: '<%= pathToServer %>/<%= helpPath %>/'
           }
         ]
-      }
+      },
+      css: {
+        files: [
+          {
+            expand: true,
+            cwd: 'files/',
+            src: [
+              '*.css' // can be many matching files or patterns
+            ],
+            dest: '<%= pathToServer %>/<%= helpPath %>/'
+          }
+        ]
+      },
     },
     jshint: {
       options: {
