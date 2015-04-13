@@ -17,8 +17,8 @@
 
   //////// Dependencies
   
-  var cssFile = '/DonContentPasteboard/help-menu.css';
-  var jsonFile = '/DonContentPasteboard/help-json.js';
+  var cssFile = '/help/help-menu.css';
+  var jsonFile = '/help/help-json.js';
 
   /*
    * NOTE: The JSON file above must be perfectly formatted

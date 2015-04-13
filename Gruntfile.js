@@ -53,7 +53,7 @@ module.exports = function (grunt) {
             src: [
               '*.js' // can be many matching files or patterns
             ],
-            dest: '<%= pathToServer %>/DonContentPasteboard/'
+            dest: '<%= pathToServer %>/help/'
           }
         ]
       }
