@@ -79,14 +79,11 @@ module.exports = function (grunt) {
       options: {
         reporter: require('jshint-stylish'),
         globals: {
-          jQuery: true
+          jQuery: true,
+          debug: true
         }
       },
       gruntfile: {
-        options: {
-          strict: false,
-          force: true
-        },
         files: {
           src: ['Gruntfile.js']
         },
