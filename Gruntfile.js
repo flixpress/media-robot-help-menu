@@ -8,6 +8,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     // Configurable paths
     pathToServer: '/Volumes/MediaRobot',
+    helpPath: 'help',
     watch: {
       sass: {
         files: ['files/**/*.{scss,sass}'],
@@ -53,7 +54,7 @@ module.exports = function (grunt) {
             src: [
               '*.js' // can be many matching files or patterns
             ],
-            dest: '<%= pathToServer %>/help/'
+            dest: '<%= pathToServer %>/<%= helpPath %>/'
           }
         ]
       }
