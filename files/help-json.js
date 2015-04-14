@@ -44,7 +44,7 @@
   {
     "name":"Pro templates overview",
     "type":"html",
-    "data":"/HelpContent/pro-overview.html"
+    "data":"/help/pro-overview.html"
   },
   {
     "name":"Adding Audio",

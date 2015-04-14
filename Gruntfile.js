@@ -74,7 +74,7 @@ module.exports = function (grunt) {
             src: [
               '*.html' // can be many matching files or patterns
             ],
-            dest: '<%= pathToServer %>/HelpContent/'
+            dest: '<%= pathToServer %>/<%= helpPath %>/'
           }
         ]
       },
