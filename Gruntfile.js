@@ -18,6 +18,10 @@ module.exports = function (grunt) {
         files: ['files/**/*.js'],
         tasks: ['jshint:all', 'copy:javascript']
       },
+      html: {
+        files: ['files/**/*.html'],
+        tasks: ['copy:html']
+      },
       css: {
         files: ['files/**/*.css'],
         tasks: ['copy:css']
@@ -59,6 +63,18 @@ module.exports = function (grunt) {
               '*.js' // can be many matching files or patterns
             ],
             dest: '<%= pathToServer %>/<%= helpPath %>/'
+          }
+        ]
+      },
+      html: {
+        files: [
+          {
+            expand: true,
+            cwd: 'files/',
+            src: [
+              '*.html' // can be many matching files or patterns
+            ],
+            dest: '<%= pathToServer %>/HelpContent/'
           }
         ]
       },
