@@ -242,18 +242,29 @@
     });
 
     $(document).bind('openHelpMenu', function(event){
+      // function to pause the template preview video
+      var pauseCount = 0;
+      function pauseUnderlyingPlayer() {
+        if ( document.getElementsByTagName('iframe')[0].contentWindow.jwplayer === undefined ){
+          if (++pauseCount < 8){
+            setTimeout(pauseUnderlyingPlayer(), 500);
+          }
+        } else {
+          document.getElementsByTagName('iframe')[0].contentWindow.jwplayer().pause(true);
+        }
+      }
+      
       $helpButton.addClass('active').html('Hide Help');
       $helpScreen.addClass('active');
-      
-      // Pause the template preview video
-      document.getElementsByTagName('iframe')[0].contentWindow.jwplayer().pause(true);
-      
+
       $(document).bind('click.modal', function(event){
         if (!$(event.target).closest(modalJQSelector).length) {
           // Click was outside the menu
           $(this).trigger('closeHelpMenu');
         }
       });
+
+      pauseUnderlyingPlayer();
     });
     $(document).bind('closeHelpMenu', function(){
       $helpButton.removeClass('active').html('Show Help');
