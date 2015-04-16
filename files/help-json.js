@@ -50,5 +50,10 @@
     "name":"Adding Audio",
     "type":"video",
     "data":"http://mediarobotvideo.s3.amazonaws.com/help/pro/adding-audio.mp4"
+  },
+  {
+    "name":"Adding images",
+    "type":"video",
+    "data":"http://mediarobotvideo.s3.amazonaws.com/help/pro/adding-images.mp4"
   }
 ]
