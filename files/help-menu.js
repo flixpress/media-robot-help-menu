@@ -284,6 +284,13 @@
     $helpScreen.find('.content').append($helpMenu,$helpInfo);
     $(modalJQSelector).append($helpButton, $helpScreen);
 
+    // Hack to get around colorbox setting overflow to hidden on all resizes
+    $(window).bind('resize', function(){
+      setTimeout(function(){
+        $(modalJQSelector).css({overflow: 'visible'});
+      }, 3);
+    });
+
   }).always(function(){
     // things to always do...
   }).fail(function(){
