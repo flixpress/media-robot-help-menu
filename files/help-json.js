@@ -55,5 +55,10 @@
     "name":"Adding images",
     "type":"video",
     "data":"http://mediarobotvideo.s3.amazonaws.com/help/pro/adding-images.mp4"
+  },
+  {
+    "name":"Using the audio pane",
+    "type":"video",
+    "data":"http://mediarobotvideo.s3.amazonaws.com/help/pro/audio-pane.mp4"
   }
 ]
