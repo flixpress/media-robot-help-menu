@@ -60,5 +60,29 @@
     "name":"Using the audio pane",
     "type":"video",
     "data":"http://mediarobotvideo.s3.amazonaws.com/help/pro/audio-pane.mp4"
+  },
+  {
+    "name":"Pro Template Tips",
+    "type":"section"
+  },
+  {
+    "name":"Flixpress intro + your video",
+    "type":"html",
+    "data":"/help/using-intro-video-tips.html"
+  },
+  {
+    "name":"Custom image quality tips",
+    "type":"html",
+    "data":"/help/custom-image-quality-tips.html"
+  },
+  {
+    "name":"Long form text tips",
+    "type":"html",
+    "data":"/help/long-form-text-tips.html"
+  },
+  {
+    "name":"Voice over text tips",
+    "type":"html",
+    "data":"/help/voice-over-tips.html"
   }
 ]
